@@ -1,0 +1,84 @@
+https://github.com/rafayk7/tesseractDataGenerator
+
+https://docs.opencv.org/5.x/
+
+https://github.com/tesseract-ocr/tessdoc/blob/main/tess5/TrainingTesseract-5.md
+
+https://github.com/tesseract-ocr/tesstrain
+
+https://docs.opencv.org/4.x/d2/d96/tutorial_py_table_of_contents_imgproc.html
+
+https://docs.opencv.org/4.x/da/d6e/tutorial_py_geometric_transformations.html
+
+Object Tracking
+
+Canny Edge Detection in OpenCV
+
+
+void cv::Canny( InputArray 	image,
+		OutputArray 	edges,
+		double 	threshold1,
+		double 	threshold2,
+		int 	apertureSize = 3,
+		bool 	L2gradient = false 
+)	
+
+
+
+### Functions
+https://docs.opencv.org/4.x/dd/d1a/group__imgproc__feature.html
+
+
+
+What are contours?
+Contours can be explained simply as a curve joining 
+all the continuous points (along the boundary), 
+having same color or intensity. The contours are a 
+useful tool for shape analysis and object detection and recognition.
+
+#For better accuracy, use binary images. 
+So before finding contours, apply threshold 
+or canny edge detection.
+
+#Since OpenCV 3.2, findContours() no longer 
+modifies the source image.
+
+#In OpenCV, finding contours is like finding 
+white object from black background. So remember, 
+object to be found should be white 
+and background should be black.
+
+
+
+
+How to draw the contours?
+To draw the contours, cv.drawContours function is used. 
+It can also be used to draw any shape provided 
+you have its boundary points. Its first argument is source image, 
+second argument is the contours which should be passed as a Python list
+
+
+
+
+
+https://docs.opencv.org/4.x/d1/d32/tutorial_py_contour_properties.html
+
+
+
+Corner Detection
+
+
+https://docs.opencv.org/5.x/
+
+
+
+https://github.com/reza1615/PersianOcr/wiki/%D9%85%D8%B1%D8%A7%D8%AD%D9%84-%D8%B3%D8%A7%D8%AE%D8%AA-%D9%81%D8%A7%DB%8C%D9%84-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%E2%80%8C%DB%8C%D8%A7%D9%81%D8%AA%D9%87
+
+
+https://github.com/reza1615/PersianOcr/wiki/%D9%86%DA%A9%D8%A7%D8%AA-%D9%85%D9%87%D9%85
+
+
+
+
+
+

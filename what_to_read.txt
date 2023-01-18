@@ -1,0 +1,6 @@
+https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html
+
+https://pythonprogramming.net/loading-images-python-opencv-tutorial/
+
+https://pythonexamples.org/python-opencv/
+

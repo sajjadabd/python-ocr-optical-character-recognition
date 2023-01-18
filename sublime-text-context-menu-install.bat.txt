@@ -1,0 +1,19 @@
+@echo off
+SET sublPath=C:\Program Files\Sublime Text\sublime_text.exe
+
+rem add context menu to all file types
+@reg add "HKEY_CLASSES_ROOT\*\shell\Edit with Sublime Text"         /t REG_SZ /v "" /d "Edit with Sublime Text" /f
+@reg add "HKEY_CLASSES_ROOT\*\shell\Edit with Sublime Text"         /t REG_EXPAND_SZ /v "Icon" /d "%sublPath%,0" /f
+@reg add "HKEY_CLASSES_ROOT\*\shell\Edit with Sublime Text\command" /t REG_SZ /v "" /d "%sublPath% \"%%1\"" /f
+
+rem add context menu to folders
+@reg add "HKEY_CLASSES_ROOT\Directory\shell\Open with Sublime Text"         /t REG_SZ /v "" /d "Open with Sublime Text" /f
+@reg add "HKEY_CLASSES_ROOT\Directory\shell\Open with Sublime Text"         /t REG_EXPAND_SZ /v "Icon" /d "%sublPath%,0" /f
+@reg add "HKEY_CLASSES_ROOT\Directory\shell\Open with Sublime Text\command" /t REG_SZ /v "" /d "%sublPath% \"%%1\"" /f
+
+rem add context menu to current folder
+@reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shell\Open in Sublime Text"         /t REG_SZ /v "" /d "Open in Sublime Text" /f
+@reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shell\Open in Sublime Text"         /t REG_EXPAND_SZ /v "Icon" /d "%sublPath%,0" /f
+@reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shell\Open in Sublime Text\command" /t REG_SZ /v "" /d "%sublPath% \"%%v\"" /f
+
+pause

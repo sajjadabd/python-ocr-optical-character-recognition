@@ -1,0 +1,12 @@
+@echo off
+
+rem remove context menu from all file types
+@reg delete "HKEY_CLASSES_ROOT\*\shell\Edit with Sublime Text" /f
+
+rem remove context menu from folders
+@reg delete "HKEY_CLASSES_ROOT\Directory\shell\Open with Sublime Text" /f
+
+rem remove context menu from current folder
+@reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shell\Open in Sublime Text" /f
+
+pause

@@ -1,0 +1,34 @@
+## step1 (making box)
+
+tesseract per.arial.exp0.tif per.arial.exp0 batch.nochop makebox
+
+tesseract per.arial.exp0.tif per.arial.exp0 -l per batch.nochop makebox
+
+## step 2
+
+tesseract per.arial.exp0.tif per.arial.exp0 nobatch box.train
+
+## step 3
+
+unicharset_extractor per.arial.exp0.box
+
+## step 4 (font_properties)
+
+mftraining -F font_properties -U unicharset -O per.unicharset per.arial.exp0.tr
+
+
+## step 5
+
+cntraining per.arial.exp0.tr
+
+## step 6
+
+combine_tessdata per.
+
+
+## step 7 (cheking the result)
+
+tesseract per.arial.exp0.tif output -l per
+
+combine_tessdata -e ara.traineddata c:\1\ara.config c:\1\ara.unicharset
+

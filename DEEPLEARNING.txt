@@ -1,0 +1,6 @@
+CNN
+Most computer vision algorithms use something called a convolution neural network, or CNN. A CNN is a model used in machine learning to extract features, like texture and edges, from spatial data
+
+
+RNN
+An RNN is a type of neural network that can work with sequences such as text, sound, videos, finance data, and more. Combining CNNs and RNNs helps us work with images and sequences of words in this case. The goal, then, is to generate captions for a given image.
